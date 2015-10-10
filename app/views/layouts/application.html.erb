@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Source</title>
+  <title>Stickey Source</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+ <nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <%=link_to "Source", root_path, class: "navbar-brand" %>
-    </div>
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav navbar-right">
-        <% if current_user %>
-          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to "Sign In", new_user_session_path %></li>
-        <% end %>
-      </ul>
-    </div>
   </div>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav navbar-right">
+      <% if user_signed_in? %>
+      <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+      <li><%= link_to "Login", new_user_session_path %></li> 
+      <% end %>
+    </ul>
+    <ul class="nav navbar-nav navbar-left"> 
+      <li><%= link_to 'Stickey Source', '#', class: "navbar-brand" %></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
 </nav>
-
-<%= yield %>
-
+  <div class="container">
+      <%= yield %>
+  </div>
 </body>
-</html>

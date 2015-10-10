@@ -1,2 +1,34 @@
+<% if user_signed_in? %>
+<% else %>
+<div class="jumbotron">
 
+<h1 class="page-title center"><center>Stickey Source</center></h1>
+<h3><center><strong>Product Management for Sourcing Companies</strong></center></h3>
+<div class="span7 text-center">
+  <br>
+    <p>
+      <%= link_to "Log-In with Google", new_user_registration_path, class: "btn btn-default btn-lg" %>
+    </p>
+  <br>
+  <br>
+  <br>
+</div>
+</div>
+
+  <div class="row">
+  <div class="col-md-4">
+  <center><h1><strong>1. Create Sourcing Ideas</strong></h3></center>
+  <center><h3 class="featurette-heading"><span class="text-muted">Easily Enter now product ideas. Your team can comment. </span></h3></center>
+  </div>
+  <div class="col-md-4">
+  <center><h1><strong>2. Compare Products & Supplier Quotes </strong></h3></center>
+  <center><h3 class="featurette-heading"><span class="text-muted">Set side by side comparisons and track communications with suppliers</span></h3></center>
+  </div>
+  <div class="col-md-4">
+  <center><h1><strong>3. Track and Mangae Opportunities</strong></h3></center>
+  <center><h3 class="featurette-heading"><span class="text-muted">Set follow ups and get reminders when products are getting shipped</span></h3></center>
+  </div>
+</div>
+</div>
+<% end %>
 
