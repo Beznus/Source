@@ -31,6 +31,7 @@ gem 'autoprefixer-rails'
 gem 'devise'
 
 gem 'simple_form'
+gem "font-awesome-rails"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

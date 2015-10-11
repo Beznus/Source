@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Unit price:</strong>
+  <%= @quote.unit_price %>
+</p>
+
+<p>
+  <strong>Minimum order quantity:</strong>
+  <%= @quote.minimum_order_quantity %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @quote.product_id %>
+</p>
+
+<%= link_to 'Edit', edit_quote_path(@quote) %> |
+<%= link_to 'Back', quotes_path %>

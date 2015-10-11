@@ -1,0 +1,13 @@
+<%= simple_form_for(@quote) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :unit_price %>
+    <%= f.input :minimum_order_quantity %>
+    <%= f.input :product_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
