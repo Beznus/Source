@@ -1,0 +1,21 @@
+<%= simple_form_for(@email) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :company_id %>
+    <%= f.input :product_id %>
+    <%= f.input :recipient %>
+    <%= f.input :sender %>
+    <%= f.input :from %>
+    <%= f.input :body %>
+    <%= f.input :body_plain %>
+    <%= f.input :body_html %>
+    <%= f.input :created_at %>
+    <%= f.input :updated_at %>
+    <%= f.input :subject %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_id: 
+  product_id: 
+  recipient: 
+  sender: 
+  from: 
+  body: 
+  body_plain: 
+  body_html: 
+  created_at: 
+  updated_at: 
+  subject: MyString
+
+two:
+  company_id: 
+  product_id: 
+  recipient: 
+  sender: 
+  from: 
+  body: 
+  body_plain: 
+  body_html: 
+  created_at: 
+  updated_at: 
+  subject: MyString

@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @email.company_id %>
+</p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @email.product_id %>
+</p>
+
+<p>
+  <strong>Recipient:</strong>
+  <%= @email.recipient %>
+</p>
+
+<p>
+  <strong>Sender:</strong>
+  <%= @email.sender %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @email.from %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @email.body %>
+</p>
+
+<p>
+  <strong>Body plain:</strong>
+  <%= @email.body_plain %>
+</p>
+
+<p>
+  <strong>Body html:</strong>
+  <%= @email.body_html %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @email.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @email.updated_at %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @email.subject %>
+</p>
+
+<%= link_to 'Edit', edit_email_path(@email) %> |
+<%= link_to 'Back', emails_path %>
