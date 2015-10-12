@@ -1,35 +1,87 @@
 <p id="notice"><%= notice %></p>
 <div class="container" style="margin-top: 35px; margin-bottom: 35px;">
 <%=render 'products/progress'%>
-<div>
 
-<div>
-<div class='col-md-4'>
-<div class="jumbotron">
-    <h2>Supplier/Quotes table</h2>
-    <h3>meow</h3>
-    <h3>meow</h3>
-    <h3>email thread</h3>
-    <h3>meow</h3>
-    <h3>meow</h3>
-    <h3>email thread</h3>
-    <h3>meow</h3>
-    <h3>meow</h3>
-    <h3>email thread</h3>
-</div>
+<div class="row">
+  <div class='col-md-4'>
+    <div class="panel panel-default">
+      <div class="panel-heading"><h2>Supplier/Quotes table</h2></div>
+      <div class="panel-body">
+        <% @product.quotes.each do |quote| %>
+        <% end %>
+        <div class="media">
+          <div class="media-left">
+            <a href="#">
+              <%= image_tag 'sales_funnel.png', size: "64" %>
+            </a>
+          </div>
+          <div class="media-body">
+            <h3>Quote 1</h3>
+            <p>MOQ -- Item Price</p>
+          </div>
+        </div>
+        <div class="media">
+          <div class="media-left">
+            <a href="#">
+              <%= image_tag 'sales_funnel.png', size: "64"%>
+            </a>
+          </div>
+          <div class="media-body">
+            <h3>Quote 1</h3>
+            <p>MOQ -- Item Price</p>
+          </div>
+        </div>
+        <div class="media">
+          <div class="media-left">
+            <a href="#">
+              <%= image_tag 'sales_funnel.png', size: "64" %>
+            </a>
+          </div>
+          <div class="media-body">
+            <h3>Quote 1</h3>
+            <p>MOQ -- Item Price</p>
+          </div>
+        </div>
+        <div class="media">
+          <div class="media-left">
+            <a href="#">
+              <%= image_tag 'sales_funnel.png', size: "64"%>
+            </a>
+          </div>
+          <div class="media-body">
+            <h3>Quote 1</h3>
+            <p>MOQ -- Item Price</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class='col-md-8'>
+    <div class="panel panel-default">
+      <div class="panel-heading"><h2>Product Name</h2></div>
+      <div class="panel-body">
+        <h3>Calculated value from selected quote</h3>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class='col-md-8'>
-<div class="jumbotron">
-    <h3>Product Pic</h3>
-    <h3>MOQ & price</h3>
-    <%=render 'products/form'%>
-</div>
-</div>
+<div class="row">
+  <div class='col-md-4'>
+    <div id="disqus_thread"></div>
+  </div>
+  <div class="col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading"><h2>Emails</h2></div>
+      <div class="panel-body">
+        <p>@product.emails.each do |email|</p>
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class='col-md-8'>
-<div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = 'stickeysource';
@@ -44,5 +96,3 @@
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
-</div>
