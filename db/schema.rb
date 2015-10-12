@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151012135354) do
+ActiveRecord::Schema.define(version: 20151012142930) do
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
-    t.string   "token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "token"
   end
 
   create_table "emails", force: :cascade do |t|
@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(version: 20151012135354) do
   create_table "products", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "token"
+    t.integer  "company_id"
   end
 
   create_table "quotes", force: :cascade do |t|
