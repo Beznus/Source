@@ -8,52 +8,10 @@
       <div class="panel-heading"><h2>Supplier/Quotes table</h2></div>
       <div class="panel-body">
         <% @product.quotes.each do |quote| %>
+          <%= render 'quotes/quote', :quote=> quote %>
         <% end %>
-        <div class="media">
-          <div class="media-left">
-            <a href="#">
-              <%= image_tag 'sales_funnel.png', size: "64" %>
-            </a>
-          </div>
-          <div class="media-body">
-            <h3>Quote 1</h3>
-            <p>MOQ -- Item Price</p>
-          </div>
-        </div>
-        <div class="media">
-          <div class="media-left">
-            <a href="#">
-              <%= image_tag 'sales_funnel.png', size: "64"%>
-            </a>
-          </div>
-          <div class="media-body">
-            <h3>Quote 1</h3>
-            <p>MOQ -- Item Price</p>
-          </div>
-        </div>
-        <div class="media">
-          <div class="media-left">
-            <a href="#">
-              <%= image_tag 'sales_funnel.png', size: "64" %>
-            </a>
-          </div>
-          <div class="media-body">
-            <h3>Quote 1</h3>
-            <p>MOQ -- Item Price</p>
-          </div>
-        </div>
-        <div class="media">
-          <div class="media-left">
-            <a href="#">
-              <%= image_tag 'sales_funnel.png', size: "64"%>
-            </a>
-          </div>
-          <div class="media-body">
-            <h3>Quote 1</h3>
-            <p>MOQ -- Item Price</p>
-          </div>
-        </div>
-
+     
+      <%= button_to "New Quote", new_quote_path, remote: true, class: "btn btn-primary" %>
       </div>
     </div>
   </div>

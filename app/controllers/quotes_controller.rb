@@ -15,6 +15,10 @@ class QuotesController < ApplicationController
   # GET /quotes/new
   def new
     @quote = Quote.new
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   # GET /quotes/1/edit

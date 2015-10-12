@@ -1,0 +1,18 @@
+//TODO fix this thing
+
+$("#quote<%=@quote.id%>-form").dialog({
+  autoOpen: true,
+  height: 200,
+  width: 200,
+  modal: true,
+  title: 'Edit Status',
+  open: function() {
+    $("#quote<%=@quote.id%>-form").html("<%= escape_javascript(render('quotes/quote')) %>")
+  },
+});
+
+$("#quote<%=@quote.id%>-form").submit(function(){
+  $("#quote<%=@quote.id%>-form").dialog("close");
+});
+
+

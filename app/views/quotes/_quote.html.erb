@@ -1,0 +1,22 @@
+<div class="media">
+  <div class="media-left">
+    <a href="#">
+      <%= image_tag 'sales_funnel.png', size: "64" %>
+    </a>
+  </div>
+  <div class="media-body">
+    <h3>Quote <%= quote.id%></h3>
+    <p>
+      <strong>Unit price:</strong>
+      <%= quote.unit_price %>
+    </p>
+    <p>
+      <strong>Minimum order quantity:</strong>
+      <%= quote.minimum_order_quantity %>
+    </p>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_quote_path(quote) %> 
+
+<div id="quote<%=quote.id%>-form" title="Quote"></div>
