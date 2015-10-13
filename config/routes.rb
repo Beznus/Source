@@ -5,7 +5,11 @@ Rails.application.routes.draw do
 
   resources :suppliers
 
-  resources :companies
+  resources :companies do
+    collection do
+      post :join_company
+    end
+  end
 
   resources :products
 

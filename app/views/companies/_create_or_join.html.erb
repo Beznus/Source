@@ -1,0 +1,8 @@
+<h1>Join a company by entering your company token</h1>
+<%= form_tag join_company_companies_path, method: :post do %>
+  <%= label_tag 'token', "Enter your token:" %>
+  <%= text_field_tag 'token' %>
+  <%= submit_tag 'Join' %>
+<% end %>  
+
+<h2>Or create a new one</h2>

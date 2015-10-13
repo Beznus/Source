@@ -3,8 +3,12 @@ class CompaniesController < ApplicationController
 
   # GET /companies
   # GET /companies.json
-  def index
-    @companies = Company.all
+
+  def join_company
+    company = Company.where(token: params[:token]).first
+    if current_user && !company.nil?
+      current_user.update_attributes(company_id: company.id)
+    end
   end
 
   # GET /companies/1
