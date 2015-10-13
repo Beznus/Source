@@ -22,11 +22,20 @@
           <span><h1><%= link_to 'Products', products_path %></h1></span>
         </li>
 
+         <li>
+          <div class="sidebar-icon">
+          </div>
+          <span><h1><%= link_to 'Inactive Products', products_path %></h1></span>
+        </li>
+
         <li>
           <div class="sidebar-icon">
           </div>
           <span><h1><%= link_to 'Suppliers', suppliers_path %></h1></span>
-            <% if user_signed_in? %>
+            
+        </li>
+        <li>
+          <% if user_signed_in? %>
               <li><h1><%= link_to "Log out", destroy_user_session_path, method: :delete %></h1></li>
             <% else %>
               <li><h1><%= link_to "Login", new_user_session_path %></h1></li> 
