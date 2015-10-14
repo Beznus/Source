@@ -1,5 +1,7 @@
 class SuppliersController < ApplicationController
   before_action :set_supplier, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :check_company
 
   # GET /suppliers
   # GET /suppliers.json

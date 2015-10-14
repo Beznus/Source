@@ -10,15 +10,16 @@
   
 <div class="row">
   <div class="container-fluid container-app">
+    <% if user_signed_in? %>
     <div class="col-sm-3 col-md-2 sidebar">
       <ul class="nav nav-sidebar">
-        <% if current_user && current_user.company_id.nil? %>
+        <% if current_user.company_id.nil? %>
           <li>
             <span><h1><%= link_to 'Create or Join a Company', dashboard_index_path %></h1></span>
           </li>
         <% else %>
         <li>
-          <span><h1><%= link_to 'Dashboard', dashboard_index_path %></h1></span>
+          <span><h1><%= link_to 'Dashboard', dashboard_user_path(current_user) %></h1></span>
         </li>
 
         <li>
@@ -41,17 +42,14 @@
         </li>
         <% end %>
         <li>
-          <% if user_signed_in? %>
               <li><h1><%= link_to "Log out", destroy_user_session_path, method: :delete %></h1></li>
-            <% else %>
-              <li><h1><%= link_to "Login", new_user_session_path %></h1></li> 
-            <% end %>
         </li>
-
       </ul>
     </div>
+    <% end %>
     <div class="container">
       <%= yield %>
+      <li><h1><%= link_to "Login", new_user_session_path %></h1></li>
       <% if current_user && current_user.company_id.nil? %>
         <%= render 'companies/create_or_join' %>
       <% end %>
