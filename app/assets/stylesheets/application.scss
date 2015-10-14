@@ -15,6 +15,34 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "jquery-ui";
+
+.landing-jumbo {
+  position: relative;
+  background-image: image-url("hallway.jpg"); 
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 536px;
+  width: 100%;
+}
+
+.landing-jumbo::before {
+  background-color: rgba(73,56,49,0.6);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.action-text {
+  color: white;
+  padding-top: 10em;
+  height: 10em;
+  position: relative;
+  text-align:center;
+}
+
 label {
     display: block;
 }
