@@ -46,12 +46,9 @@
         </li>
       </ul>
     </div>
-    <% else %>
-    <%= render 'pages/call_to_action' %>
     <% end %>
     <div class="container">
       <%= yield %>
-      <li><h1><%= link_to "Login", new_user_session_path %></h1></li>
       <% if current_user && current_user.company_id.nil? %>
         <%= render 'companies/create_or_join' %>
       <% end %>
