@@ -15,7 +15,7 @@
       <ul class="nav nav-sidebar">
         <% if current_user.company_id.nil? %>
           <li>
-            <span><h1><%= link_to 'Create or Join a Company', dashboard_index_path %></h1></span>
+            <span><h1><%= link_to 'Create or Join a Company', dashboard_user_path(current_user) %></h1></span>
           </li>
         <% else %>
         <li>
